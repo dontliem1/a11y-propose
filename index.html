@@ -1,103 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <title>Shower Presentation Engine</title>
+    <title>Цифровая доступность</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
     <style>
         .shower {
+            --color-blue: #3073E8;
             --slide-ratio: calc(16 / 9);
+        }
+        .slide::after {
+            background-image: url('pictures/ribbon.svg');
+        }
+        .cover {
+            object-fit: contain;
+        }
+        li {
+            line-height: 1.2;
+            margin-bottom: .5em;
+        }
+        h3 {
+            margin: 0;
+        }
+        .design .columns.two {
+            grid-template-columns: 3fr 2fr;
+        }
+        ol[type="a"] {
+            list-style: lower-alpha;
+        }
+        ol[type="I"] {
+            list-style: upper-roman;
+        }
+        ol[type="a"] li::before,
+        ol[type="I"] li::before {
+            display: none;
+        }
+        li::marker {
+            color: var(--color-grey);
+        }
+        .flex {
+            display: flex;
+            line-height: 1.4;
+        }
+        .ml-auto {
+            margin-left: auto;
+        }
+        .gap-1 {
+            gap: 1em;
         }
     </style>
 </head>
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Цифровая доступность</h1>
+        <p>Лекция</p>
     </header>
 
     <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="https://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
+        <h2>Цифровая<br>доступность</h2>
+        <p class="note">Михаил Воробьев, разработчик интерфейсов Практикума</p>
+        <ol type="I">
+            <li>Демонстрация</li>
+            <li>Частые проблемы</li>
+            <li>Советы дизайнерам и разработчикам</li>
+            <li>Q&A</li>
+        </ol>
+        <img class="place right" src="pictures/cover.jpg" alt="Фотография Михаила Воробьева">
         <style>
             #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
+                font-size: 300%;
+                margin-top: -.25em;
+                margin-bottom: .25em;
+                color: var(--color-blue);
             }
-
             #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
-            }
-
-            #cover p a {
-                color: white;
+                max-width: 50%;
+                line-height: 1.4;
             }
         </style>
     </section>
 
     <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+        <img class="cover" src="pictures/microsoft-disability-categories.webp" alt="Примеры особенностей здоровья">
     </section>
 
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+    <section class="slide" id="design">
+        <h2>I. Заметки для дизайнера</h2>
+        <p>Страница сайта / экран приложения должны выполнять свою функцию.</p>
+        <span>Ещё важны:</span>
+        <div class="columns four">
+            <ul>
+                <li>Красота</li>
+                <li><a href="https://bureau.ru/bb/soviet/20160322/" target="_blank">Удобство</a></li>
+                <li>Скорость</li>
+            </ul>
+            <ul>
+                <li>Экономность</li>
+                <li>Отзывчивость</li>
+                <li>Доступность</li>
+            </ul>
         </div>
     </section>
 
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
+    <section class="slide design" id="design1">
+        <div class="columns two">
+            <div>
+                <h3>Адаптивность</h3>
                 <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
+                    <li>Мобильные версии сайтов шириной 320px</li>
+                    <li>Для элементов, которые тянутся по ширине, продумайте поведение (ограничение) на разных экранах</li>
+                    <li>В неочевидных местах указывайте: элемент фиксирован в размерах или зависит от ширины/высоты экрана; какие минимальные/максимальные размеры?</li>
                 </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
+            </div>
+            <div>
+                <h3>Переполнение</h3>
+                <ul>
+                    <li>Константин Константино&shy;польский</li>
+                    <li>В вебе есть переносы</li>
+                    <li>Если мы нарисовали ряд карточек, и предполага&shy;ется, что их может быть больше/меньше: как они себя будут вести?</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
+    <section class="slide design" id="design2">
+        <div class="columns two">
+            <div>
+                <h3>Цвета</h3>
+                <ul>
+                    <li>Проверяйте контрастность</li>
+                    <li>Передавайте информацию не только цветом</li>
+                    <li>Заведите палитру цветов и старайтесь не отступать от неё</li>
+                    <li>Для удобства создания ховеров и состояний можно использовать HSL</li>
+                    <li>Не используйте прозрачность, если в этом нет необходимости — пишите конечный цвет</li>
+                    <li>В какой цвет красить шапку браузера?</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Текст</h3>
+                <ul>
+                    <li>Заведите текстовые стили и старайтесь не отступать от них.</li>
+                    <li>Как должны выглядеть ссылки в тексте?</li>
+                    <li>Размер шрифта в полях для ввода текста — не менее 16px</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide design" id="design3">
+        <div class="columns two">
+            <div>
+                <h3>Интерактивность</h3>
+                <ul>
+                    <li>Если нужно, продумайте состояния ховеров</li>
+                    <li>Если нужно сделать горизонтальную/вертикальную прокрутку элемента, решите прячем ли мы скроллбар, оформляем ли его по своему, или оставляем стандартный</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Картинки</h3>
+                <ul>
+                    <li>Фавиконка для сайта — svg или png до 512х512. Можно отдельно для светлой и темной темы</li>
+                    <li>Обложка для шеринга в соцсетях 1280×640px</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="slide">

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрация</title>
+    <meta name="color-scheme" content="dark light">
+    <style>
+        a {
+            color: inherit;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 3em;">
+    <p style="font-size: 300%" aria-hidden="true">Сейчас я буду делать предложение, можете доставать камеры</p>
+    <header style="display: flex; justify-content: space-between;">
+        <img width="200" src="pictures/ЛОГОТИП.svg" alt="Изображение">
+        <nav>
+            <ul style="display: flex; list-style: none; gap: 2em; padding: 0;">
+                <li>
+                    <a href="" aria-current="true">Новости</a>
+                </li>
+                <li>
+                    <a href="catalog">Каталог</a>
+                </li>
+            </ul>
+        </nav>
+        <button type="button" aria-expanded="false">Корзина</button>
+    </header>
+    <main>
+        <h1 style="font-size: 300%;"><time datetime="20-02-2023">20 февраля</time></h1>
+        <figure style="display: flex; gap: 2em;">
+            <img width="600" height="400" src="pictures/proposal.webp" style="object-fit: cover;" alt="Мужчина стоит на колене, у него в руках шкатулка">
+            <figcaption>
+                <dl>
+                    <dt>— Настя, ты за меня выйдешь?</dt>
+                    <dd>Зал замер в ожидании...</dd>
+                </dl>
+            </figcaption>
+        </figure>
+    </main>
+</body>
+</html>
